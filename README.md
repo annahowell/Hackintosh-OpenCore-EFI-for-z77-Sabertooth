@@ -4,10 +4,10 @@ This is mostly a raw dump of the EFI I use for my z77 Sabertooth running Catalin
 
 The included files and config were pieced together from several excellent guides and are owned by their respective authors; I simply created the config.plist, SSDT .aml files and USBMap.kext.
 
-##### What works:
+### What works:
 Everything basically, including point release updates, USB mapping and power states/sleep. Handoff and continuity work with a Fenvi T919 too. From all I can tell the only things not working are sidecar (presumably due to a lack of x265 hardware encoding on the 3770K), and the filevault unlock screen uses a slightly wrong aspect ratio on the RX570 and my 4K Monitors.
 
-##### My current setup:
+### My current setup:
 - Asus z77 Sabertooth (BIOS 2104)
 - 3700K (stock under MacOS, HD4000 disabled in BIOS)
 - Sapphire Nitro+ RX570 (first PCI-E slot, stock vBIOS, outputs all working)
@@ -20,14 +20,14 @@ Everything basically, including point release updates, USB mapping and power sta
 - ASUS XG-C100C PCI-E (OPTIONAL: Not flashed for use by MacOS and thus ignored by it)
 - Apple magic keyboard and trackpad2 (OPTIONAL)
 
-##### Disabling unsupported GPUs
-Currently the included `/EFI/OC/ACPI/SSDT-GPU-DISABLE.aml` file disables PCI-E slot 2 (second closest to GPU). If your other MacOS unsupported GPU is plugged in to PCI-E slot 1 (closest to CPU) instead, rename `/PCIE-Disable-SSDTs/SSDT-GPU-DISABLE-slot1.aml` to `SSDT-GPU-DISABLE.aml` and put it in the `/EFI/OC/ACPI/' folder, thus overwriting the file that currently exists there.
+### Disabling unsupported GPUs
+Currently the included `/EFI/OC/ACPI/SSDT-GPU-DISABLE.aml` file disables PCI-E slot 2 (second closest to GPU). If your other MacOS unsupported GPU is plugged in to PCI-E slot 1 (closest to CPU) instead, rename `/PCIE-Disable-SSDTs/SSDT-GPU-DISABLE-slot1.aml` to `SSDT-GPU-DISABLE.aml` and put it in the `/EFI/OC/ACPI/` folder, thus overwriting the file that currently exists there.
 
 
-##### Serial number
+### Serial number
 I have removed my Mac serial number etc from the config.plist, and how to find your own is beyond the scope of this readme sorry.
 
-##### Misc
+### Misc
 1. If you don't have a 3770K CPU you should remake your SSDT-PM.aml how to do so is included in [this excellent guide](https://dortania.github.io/OpenCore-Install-Guide/).
 2. The included config.plist has verbosity disabled, you can google how to enable it if you have issues
 3. All bootloader and kext files are release rather than debug versions
