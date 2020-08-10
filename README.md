@@ -30,6 +30,7 @@ I have removed my Mac serial number etc from the config.plist, and how to find y
 ### Misc
 1. If you don't have a 3770K CPU you should remake your SSDT-PM.aml how to do so is included in [this excellent guide](https://dortania.github.io/OpenCore-Install-Guide/).
 2. The included config.plist has verbosity disabled, you can google how to enable it if you have issues
-3. All bootloader and kext files are release rather than debug versions
-
+3. All bootloader and kext files are release rather than debug versions   
+   
+   
 **This will not work with opencore 0.6.0, I'll migrate post Big Sur and release an update then**
