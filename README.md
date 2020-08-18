@@ -9,10 +9,10 @@ Everything basically, including point release updates, USB mapping and power sta
 
 ### My current setup:
 - Asus z77 Sabertooth (BIOS 2104)
-- 3700K (stock under MacOS, HD4000 disabled in BIOS)
-- Sapphire Nitro+ RX570 (first PCI-E slot, stock vBIOS, outputs all working)
+- 3770K (stock under MacOS, HD4000 disabled in BIOS)
+- Sapphire Nitro+ RX570 (first PCI-E slot, stock vBIOS, all output work)
 - EVGA Hybrid 1070 (OPTIONAL: second PCI-E slot, disabled by SSDT)
-- Intel SATA SSD (connected to a chipset port - NOT AsMedia port)
+- Intel SATA SSD (connected to a chipset port - NOT ASMedia port)
 - Onboard ALC892 Audio (For headset)
 - Sabrent AU-EMAC USB Soundcard (OPTIONAL: External speakers, saves having to unplug headset)
 - Onboard 82579V 1Gbe LAN
@@ -21,16 +21,15 @@ Everything basically, including point release updates, USB mapping and power sta
 - Apple magic keyboard and trackpad2 (OPTIONAL)
 
 ### Disabling unsupported GPUs
-Currently the included `/EFI/OC/ACPI/SSDT-GPU-DISABLE.aml` file disables PCI-E slot 2 (second closest to GPU). If your other MacOS unsupported GPU is plugged in to PCI-E slot 1 (closest to CPU) instead, rename `/PCIE-Disable-SSDTs/SSDT-GPU-DISABLE-slot1.aml` to `SSDT-GPU-DISABLE.aml` and put it in the `/EFI/OC/ACPI/` folder, thus overwriting the file that currently exists there.
+Currently the included `/EFI/OC/ACPI/SSDT-GPU-DISABLE.aml` file disables PCI-E slot 2 (second closest to GPU). If instead your other MacOS unsupported GPU is plugged in to PCI-E slot 1 (closest to CPU), rename `/PCIE-Disable-SSDTs/SSDT-GPU-DISABLE-slot1.aml` to `SSDT-GPU-DISABLE.aml` and put it in the `/EFI/OC/ACPI/` folder, thus overwriting the file that currently exists there.
 
 
 ### Serial number
-I have removed my Mac serial number etc from the config.plist, and how to find your own is beyond the scope of this readme sorry.
+I have removed my Mac serial number etc from the config.plist, how to find your own is beyond the scope of this readme, sorry.
 
 ### Misc
-1. If you don't have a 3770K CPU you should remake your SSDT-PM.aml how to do so is included in [this excellent guide](https://dortania.github.io/OpenCore-Install-Guide/).
-2. The included config.plist has verbosity disabled, you can google how to enable it if you have issues
-3. All bootloader and kext files are release rather than debug versions   
-   
+1. If you don't have a 3770K CPU you should remake your SSDT-PM.aml. How to do so is included in [this excellent guide](https://dortania.github.io/OpenCore-Install-Guide/).
+2. The included config.plist has verbosity disabled during startup, you can google how to enable it if you have issues.
+3. All bootloader and kext files are release rather than debug versions.   
    
 **This will not work with opencore 0.6.0, I'll migrate post Big Sur and release an update then**
