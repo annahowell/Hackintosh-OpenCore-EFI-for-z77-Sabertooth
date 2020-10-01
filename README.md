@@ -21,7 +21,7 @@ Everything basically, including point release updates, USB mapping and power sta
 - Apple magic keyboard and trackpad2 (OPTIONAL)
 
 ### Disabling unsupported GPUs
-Currently the included `/EFI/OC/ACPI/SSDT-GPU-DISABLE.aml` file disables PCI-E slot 2 (second closest to GPU). If instead your other MacOS unsupported GPU is plugged in to PCI-E slot 1 (closest to CPU), rename `/PCIE-Disable-SSDTs/SSDT-GPU-DISABLE-slot1.aml` to `SSDT-GPU-DISABLE.aml` and put it in the `/EFI/OC/ACPI/` folder, thus overwriting the file that currently exists there.
+Currently the included `/EFI/OC/ACPI/SSDT-GPU-DISABLE.aml` file disables PCI-E slot 2 (second closest to CPU). If instead your other MacOS unsupported GPU is plugged in to PCI-E slot 1 (closest to CPU), rename `/PCIE-Disable-SSDTs/SSDT-GPU-DISABLE-slot1.aml` to `SSDT-GPU-DISABLE.aml` and put it in the `/EFI/OC/ACPI/` folder, thus overwriting the file that currently exists there.
 
 
 ### Serial number
